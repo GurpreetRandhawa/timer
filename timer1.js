@@ -3,9 +3,10 @@ inputNumbers.forEach((element, index) => {
   inputNumbers[index] = Number(element);
 });
 let res = inputNumbers.filter((element) => element).sort();
-
-for (const i of res) {
-  setTimeout(() => {
-    process.stdout.write("\x07");
-  }, i * 1000);
+if (res.length > 0) {
+  for (const i of res) {
+    setTimeout(() => {
+      process.stdout.write("\x07");
+    }, i * 1000);
+  }
 }
